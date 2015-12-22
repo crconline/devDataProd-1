@@ -8,3 +8,7 @@ The repository contains the next files:
 1. **ui.R** which defines the user interface of the app.
 
 2. **server.R** which executes all R code needed.
+
+3. **intro.md** which helps in advise how to use the app.
+
+4. **README.md** this text. 
