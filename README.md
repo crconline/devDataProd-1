@@ -18,3 +18,5 @@ For this **shiny** app to function, three files are downloaded from the **server
 2. **likertscale.csv** which is the database with the responses to the Likert scale analysed.
 
 3. **itemstext.scv** which is the file with the text of each Likert item.
+
+Anyway, I also include these files to the repository for not to have problem when deploying the app.

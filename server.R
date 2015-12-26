@@ -1,6 +1,6 @@
 # Loading required packages and files
 library(shiny)
-library(HH)
+##library(HH)
 library(markdown)
 
 fileURL <- "https://dl.dropboxusercontent.com/u/95175494/datasets/likertscale.csv"
@@ -71,11 +71,15 @@ shinyServer(function(input, output) {
         
         xt <- xtabs(~ TRAT + likert[ ,numitem], data = likert)
         dimnames(xt) = list("Treatment"=c("BSC","HO"),"Responses"=c("Strongly Disagree", "Disagree","Neutral","Agree","Strongly Agree"))
-        likert(xt, horizontal=FALSE, aspect=1.5,
-               main="Likert Item Selected",
-               auto.key=list(space="right", columns=1, reverse=TRUE, padding.text=2),
-               sub="Responses from BSC (Experimental groups) and HO (Control groups)")
-    }) 
+#         likert(xt, horizontal=FALSE, aspect=1.5,
+#                main="Likert Item Selected",
+#                auto.key=list(space="right", columns=1, reverse=TRUE, padding.text=2),
+#                sub="Responses from BSC (Experimental groups) and HO (Control groups)")
+
+        barplot(xt, beside = TRUE, legend=levels(likert$TRAT),
+                main="Likert Item Selected", col =  c("red","blue"),
+                sub="Responses from BSC (Experimental groups) and HO (Control groups)")
+        })
     
     # Generate a CHI Square test for the item
     output$summary <- renderPrint({
