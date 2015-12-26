@@ -1,3 +1,5 @@
+# ui.R for the shiny app
+# Carlos Rodriguez, PhD
 library(shiny)
 library(markdown)
 shinyUI(fluidPage(
