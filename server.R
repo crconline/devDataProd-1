@@ -1,4 +1,4 @@
-# server.R for the shiny app 
+# server.R for the shiny app
 # Carlos Rodriguez, PhD
 # Loading required packages and files
 library(shiny)
